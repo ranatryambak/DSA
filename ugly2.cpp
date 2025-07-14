@@ -4,9 +4,9 @@ using namespace std;
 class Solution {
 public:
     int nthUglyNumber(int n) {
-        vector<long long> dp(n);  // Use long long to avoid overflow during multiplication
-        int x = 0, y = 0, z = 0;   // Pointers for multiples of 2, 3, and 5
-        dp[0] = 1;  // First ugly number is always 1
+        vector<long long> dp(n);  
+        int x = 0, y = 0, z = 0;   
+        dp[0] = 1;  
 
         for (int i = 1; i < n; i++) {
             long long a = dp[x] * 2;
